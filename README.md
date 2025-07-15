@@ -1,6 +1,3 @@
-Perfect! Since you're using **React** for the frontend, I’ll update the **README.md** to reflect a proper **React + Django REST Framework** full-stack setup. Here's your updated and professional README:
-
----
 
 ````markdown
 # 📝 Daily Journal – Full Stack Project (Django + React)
@@ -54,31 +51,8 @@ class JournalEntry(models.Model):
 | PUT    | `/api/entries/<id>/` | Update an entry       |
 | DELETE | `/api/entries/<id>/` | Delete an entry       |
 
-### 🔐 CORS Setup (to allow React access)
 
-Install and configure `django-cors-headers`:
 
-```bash
-pip install django-cors-headers
-```
-
-In `settings.py`:
-
-```python
-INSTALLED_APPS = [
-    ...
-    'corsheaders',
-    'rest_framework',
-    ...
-]
-
-MIDDLEWARE = [
-    ...
-    'corsheaders.middleware.CorsMiddleware',
-    ...
-]
-
-CORS_ALLOW_ALL_ORIGINS = True  # or use CORS_ALLOWED_ORIGINS with specific URLs
 ```
 
 ---
