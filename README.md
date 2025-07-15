@@ -1,6 +1,7 @@
 
 ````markdown
 # 📝 Daily Journal – Full Stack Project (Django + React)
+````
 
 This is a beginner-friendly **full-stack journal app** with a **Django REST API backend** and a **React frontend**. Users can create, read, update, and delete journal entries — all powered by clean RESTful APIs and a responsive modern interface.
 
