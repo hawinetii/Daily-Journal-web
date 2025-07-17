@@ -29,7 +29,28 @@ def journals(request: Request):
 #getting an entrie by an id
 @api_view(["GET"])
 def journals_detail(request: Request, journal_id: int):
-    journals = get_object_or_404(Journals, pk= journal_id)
-    serializer = JournalsSerializer(journals)
+    journal = get_object_or_404(Journals, pk= journal_id)
+    serializer = JournalsSerializer(journal)
     response = {"message": "journal", "data": serializer.data}
     return Response(data= response, status = status.HTTP_200_OK)
+
+@api_view(["PUT"])
+def update_journal(request: Request, journal_id: int):
+    journal = get_object_or_404(Journals, pk = journal_id)
+    serializer = JournalsSerializer(instance = journal, data = request.data)
+    if serializer.is_valid():
+        serializer.save()
+        response = {
+        "message": "Post has been updated!",
+        "data": serializer.data
+        }
+        return Response(data= response, status = status.HTTP_200_OK)
+    return Response(data= serializer.error, status= status.HTTP_400_BAD_REQUEST)
+
+@api_view(["DELETE"])
+def delete_journal(request:Request, journal_id:int):
+    journal = get_object_or_404(Journals, pk= journal_id)
+    journal.delete()
+    response = {"message": "Journal has been deleted!"}
+    return Response(data = response, status= status.HTTP_204_NO_CONTENT)
+
