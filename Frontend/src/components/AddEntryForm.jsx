@@ -17,7 +17,7 @@ function AddEntryForm({ onAdd }) {
       <h2>Add New Journal</h2>
       <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Title" />
       <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Write something..." />
-      <button type="submit">Add</button>
+      <button className='add-button' type="submit">Add</button>
     </form>
   );
 }

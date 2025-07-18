@@ -2,7 +2,7 @@ import React from 'react';
 
 function JournalList({ entries, onSelect}) {
   return (
-    <div>
+    <div className='your-journals'>
       <h2>your journals</h2>
       {entries.map(entry => (
         <div key={entry.id} className="entry-card">
