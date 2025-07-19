@@ -22,7 +22,7 @@ A simple full-stack journal app to write, view, and manage daily entries.
 
 ## 🌱 Learning Goals
 
-* API development and integration
+* API development and integrations
 * Real-world collaboration
 * Full-stack deployment
 
