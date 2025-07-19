@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # 📝 Daily Journal App
 
 A simple full-stack journal app to write, view, and manage daily entries.
@@ -27,3 +28,5 @@ A simple full-stack journal app to write, view, and manage daily entries.
 * Full-stack deployment
 
 
+=======
+>>>>>>> copy/main
